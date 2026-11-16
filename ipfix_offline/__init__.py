@@ -3,6 +3,7 @@
 公开接口：
     Ingestor, CaptureEntry, ImportResult, PendingSummary
     wire 子模块的解析器与合成消息构造器
+    nat_correlate 子模块的离线 NAT 关联作业（NatCorrelator / run_job）
 """
 
 from .ingestor import (
@@ -23,6 +24,19 @@ from .wire import (
     decode_data_set,
     parse_message,
 )
+from .nat_correlate import (
+    ConfigError,
+    LogFileDigest,
+    NatConfig,
+    NatCorrelator,
+    NatError,
+    NatLogError,
+    RequestFileError,
+    StoreError,
+    load_config,
+    load_requests,
+    run_job,
+)
 
 __all__ = [
     "CaptureEntry",
@@ -39,4 +53,15 @@ __all__ = [
     "TemplateRecord",
     "decode_data_set",
     "parse_message",
+    "ConfigError",
+    "LogFileDigest",
+    "NatConfig",
+    "NatCorrelator",
+    "NatError",
+    "NatLogError",
+    "RequestFileError",
+    "StoreError",
+    "load_config",
+    "load_requests",
+    "run_job",
 ]
